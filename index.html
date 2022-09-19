@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=
+  , initial-scale=1.0"
+    />
+    <link rel="icon" href="dist/img/hero/Group 1.png" />
+    <link href="dist/output.css" rel="stylesheet" />
+    <script>
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+    </script>
+    <title>tailwindcss</title>
+  </head>
+  <body>
+    <!-- navbar start -->
+    <nav
+      class="px-4 nav mt-10 bg-transparent absolute top-0 left-0 w-full items-center z-10 animate-nav"
+    >
+      <div class="container">
+        <div class="flex justify-between items-center">
+          <a href="#home" class="logo">
+            <img src="dist/img/hero/Logo (1).png" alt="logo" />
+          </a>
+          <div class="flex items-center px-4">
+            <button
+              class="block absolute md:right-auto right-5 lg:hidden"
+              id="hamburger"
+              nama="hamburger"
+              type="button"
+            >
+              <span
+                class="hamburger-line origin-top-left transition duration-300 ease-in-out"
+              ></span>
+              <span
+                class="hamburger-line transition duration-300 ease-in-out"
+              ></span>
+              <span
+                class="hamburger-line origin-bottom-left transition duration-300 ease-in-out"
+              ></span>
+            </button>
+          </div>
+          <div
+            id="nav-menu"
+            class="lg:block hidden py-5 mr-5 lg:mr-0 lg:mt-0 nav-list absolute right-0 top-0 lg:static bg-primary/70 lg:bg-transparent shadow-md text-white dark:text-white lg:text-hitam shadow-black lg:shadow-none mt-[100px] rounded-xl"
+          >
+            <ul
+              class="flex flex-col lg:flex-row gap-5 lg:gap-0 text-center p-5 lg:p-0"
+            >
+                
+              <li>
+                <a href="#home" class="lg:pr-[30px] hover:text-primary">Home</a>
+              </li>
+              <li>
+                <a href="#kategoripopuler" class="lg:pr-[30px] hover:text-primary"
+                  >Our Course</a
+                >
+              </li>
+              <li>
+                <a href="#pelatihan" class="lg:pr-[30px] hover:text-primary"
+                  >Flash Sale</a
+                >
+              </li>
+              <li>
+                <a href="#review" class="lg:pr-[60px] hover:text-primary">Blog</a>
+              </li>
+              <li>
+                <a href="#" class="lg:pr-[20px] hover:text-primary">Masuk</a>
+              </li>
+              <li class="lg:mt-0 mt-5">
+                <a
+                  href="#"
+                  class="button-primary"
+                  >Daftar Sekarang</a
+                >
+              </li>
+              <li class="flex items-center pl-8 mt-3 lg:mt-0 mr-6">
+                <div class="flex">
+                  <span class="mr-2 text-sm">Light</span>
+                  <input id="dark-toggle" type="checkbox" class="hidden" >
+                  <label for="dark-toggle">
+                    <div class="flex h-5 w-9 items-center cursor-pointer rounded-full bg-button p-1">
+                      <div class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out"></div>
+                    </div>
+                  </label>
+                  <span class="ml-2 text-sm">dark</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar end -->    
+
+    <!-- Hero Section Start -->
+    <section id="home" class="home px-4 bg-primary/10 lg:h-screen dark:bg-black">
+      <div class="container pt-36">
+        <div class="flex flex-wrap items-center">
+          <div class="w-full lg:w-1/2 animate-header">
+            <div class="header-section">
+              <h1
+                class="text-hitam dark:text-white xl:text-[46px] font-bold leading-[38px] xl:leading-[53px] text-[36px]"
+              >
+                Asah Kemampuan Bidangmu Menjadi Lebih
+                <span class="text-primary">Profesional</span> dan
+                <span class="text-button">Kreatif</span>
+              </h1>
+            </div>
+            <div class="subheader-section lg:pt-[30px] pt-[20px]">
+              <h2 class="text-hitam dark:text-white text-xl">
+                Ambil dan temukan passion-mu disini, menjadi satu langkah awal
+                kesuksesanmu di masa depan
+              </h2>
+            </div>
+            <div class="button xl:pt-[140px] pt-[70px] pb-6 flex flex-wrap">
+              <button class="mulaibelajar">  
+                <a
+                    href="#"
+                    class="button-primary lg:mr-[101px] mr-5"
+                    >Mulai Belajar</a
+                  >
+              </button>
+              <a
+                href="#"
+                class="button-secondary"
+                >Explore More</a
+              >
+            </div>
+          </div>
+          <div class="w-full lg:w-1/2 animate-wiggle">
+            <img src="dist/img/hero/Group 4 (1).png" alt="horo" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero Section end -->
+
+    <!-- Client Project Start -->
+    <section id="clients" class="py-[100px] dark:bg-primary">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="mx-auto text-center">
+            <h1 class="font-medium text-[25px] text-hitam dark:text-white pb-5 animate-nav">
+              Partner Kami
+            </h1>
+          </div>
+        </div>
+
+        <div class="w-full px-4">
+          <div class="flex flex-wrap items-center justify-center">
+            <a
+              href="#"
+              class="max-w-[120px] mx-4 py-4 grayscale-0 opacity-100 hover:grayscale hover:opacity-60 lg:mx-6 xl:mx-8 transition duration-500 animate-bounce-prakerja"
+            >
+              <img src="dist/img/clients/prakerja.png" alt="prakeraja" />
+            </a>
+            <a
+              href="#"
+              class="max-w-[120px] mx-4 py-4 grayscale-0 opacity-100 hover:grayscale hover:opacity-60 lg:mx-6 xl:mx-8 transition duration-500 animate-bounce-tokopedia"
+            >
+              <img src="dist/img/clients/tokopedia.png" alt="tokopedia" />
+            </a>
+            <a
+              href="#"
+              class="max-w-[120px] mx-4 py-4 grayscale-0 opacity-100 hover:grayscale hover:opacity-60 lg:mx-6 xl:mx-8 transition duration-500 animate-bounce-gojek"
+            >
+              <img src="dist/img/clients/3.png" alt="gojek" />
+            </a>
+            <a
+              href="#"
+              class="max-w-[120px] mx-4 py-4 grayscale-0 opacity-100 hover:grayscale hover:opacity-60 lg:mx-6 xl:mx-8 transition duration-500 animate-bounce-shopee"
+            >
+              <img src="dist/img/clients/2.png" alt="shopee" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Cliend Project end -->
+
+    <!-- Kategori Populer start -->
+    <section id="kategoripopuler" class="ketegori-populer h-full dark:bg-black">
+      <div class="container pt-5">
+        <div class="w-full flex px-[20px] lg:px-0 justify-between items-center">
+          <div class="flex items-center">
+            <img src="dist/img/kategoripopuler/Vector (1).png" alt="ceklis" />
+            <h1
+              class="font-medium leading-[26px] text-[25px] text-hitam dark:text-white pb-5 pl-[14px] pt-[21px]"
+            >
+              Kategori Populer
+            </h1>
+          </div>
+          <a
+            href="#"
+            class="hidden md:inline button-secondary"
+            >Kategori Lainnya</a
+          >
+        </div>
+        <div class="w-full mt-14 px-[20px] lg:px-0 pb-[180px]">
+          <div class="grid xl:grid-cols-4 lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-6  justify-items-between">
+            <div class="box-header group">
+              <img src="dist/img/kategoripopuler/icons8-ux-design-68 1.png" alt="ui"/>
+              <div class="keterangan">
+                <h1 class="font-bold leading-[23px]">UI/UX Design</h1>
+                <h2>23 Kelas</h2>
+              </div>
+            </div>
+            <div class="box-header group">
+              <img src="dist/img/kategoripopuler/icons8-backend-development-96 1.png" alt="dev"/>
+              <div class="keterangan">
+                <h1 class="font-bold leading-[23px]">Back-end<br>Development</h1>
+                <h2>20 Kelas</h2>
+              </div>
+            </div>
+            <div class="box-header group">
+              <img src="dist/img/kategoripopuler/icons8-graphic-design-64 1.png" alt="grafik"/>
+              <div class="keterangan">
+                <h1 class="font-bold">Graphic Design</h1>
+                <h2>20 Kelas</h2>
+              </div>
+            </div>
+            <div class="box-header group">
+              <img src="dist/img/kategoripopuler/icons8-futures-64 1.png" alt="Business"/>
+              <div class="keterangan">
+                <h1 class="font-bold leading-[23px]">Business<br>Development</h1>
+                <h2>20 Kelas</h2>
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+    <!-- Kategori Populer end -->
+
+    <!-- Pelatihan Start -->
+    <section id="pelatihan" class="pilihan dark:bg-black">
+      <div class="container">
+        <div class="w-full px-[20px] lg:px-0 flex justify-between items-center">
+          <div class="kategori flex items-center">
+            <img src="dist/img/kategoripopuler/Vector (1).png" alt="ceklis" />
+            <h1 class="font-medium leading-[26px] text-[25px] text-hitam dark:text-white pb-5 pl-[14px] pt-[21px]">
+              Pilihan Populer Kami
+            </h1>
+          </div>
+          <a href="#" class="hidden md:inline button-secondary">Lihat Kelas</a>
+        </div>
+        
+        <div class="px-[20px] lg:px-0 mt-[54px] grid md:grid-cols-2 xl:grid-cols-3  gap-x-[23px] gap-y-20">
+
+          <div class="pembungkus dark:text-white">
+              <div class="h-[290px] overflow-hidden group relative dark:border-2 rounded-[10px] bg-cover bg-no-repeat">
+                <div class="w-full h-full bg-[url('../dist/img/pelatihan/unsplash_pKRNxEguRgM.png')] bg-cover bg-center absolute group-hover:scale-125 group transition-all duration-500">
+                <div class="linear group-hover:scale-90 transition-all duration-500 flex items-end">
+                  <div class="info ml-[33px] font-medium mb-[34px]">
+                    <h1 class="text-white pb-2">1.232 Siswa Terdaftar</h1> 
+                    <div class="flex bintang gap-[9px]">
+                      <img src="dist/img/pelatihan/Vector (1).png" alt="bintang">
+                      <img src="dist/img/pelatihan/Vector (1).png" alt="bintang">
+                      <img src="dist/img/pelatihan/Vector (1).png" alt="bintang">
+                      <img src="dist/img/pelatihan/Vector (1).png" alt="bintang">
+                      <img src="dist/img/pelatihan/Vector (1).png" alt="bintang">
+                    </div>
+                  </div>
+                </div>
+                </div>
+              </div>
+            <div class="review">
+              <div class="mt-[22px] mb-[30px] h-[83px]">
+                <h1 class="font-medium text-xl">Membangun Toko Online Menggunakan Framework Laravel 9 & Vue 3</h1>
+              </div>
+              <a class="rounded-[5px] bg-primary/40 dark:bg-primary py-[10px] text-base px-[10px]">Full-Stack Web Development</a>
+              <div class="harga flex flex-wrap justify-between items-center mt-[60px]">
+              <h3 class="font-bold text-[25px] text-primary">Rp 400,000</h3>
+              <a href="#" class="py-[15px] px-[30px] rounded-[50px] text-button hover:bg-button hover:text-white border border-button hover:border-button transition duration-300 ease-in-out font-medium">Lihat Kelas</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="pembungkus dark:text-white">
+              <div class="h-[290px] overflow-hidden group relative rounded-[10px] dark:border-2 bg-cover bg-no-repeat">
+                <div class="w-full h-full bg-[url('../dist/img/pelatihan/unsplash__x335IZXxfc.png')] bg-cover bg-center absolute group-hover:scale-125 group transition-all duration-500">
+                <div class="linear group-hover:scale-90 transition-all duration-500 flex items-end">
+                  <div class="info ml-[33px] font-medium mb-[34px]">
+                    <h1 class="text-white pb-2">1.382 Siswa Terdaftar</h1> 
+                    <div class="flex bintang gap-[9px]">
+                      <img src="dist/img/pelatihan/Vector (1).png" alt="bintang">
+                      <img src="dist/img/pelatihan/Vector (1).png" alt="bintang">
+                      <img src="dist/img/pelatihan/Vector (1).png" alt="bintang">
+                      <img src="dist/img/pelatihan/Vector (1).png" alt="bintang">
+                      <img src="dist/img/pelatihan/Vector (1).png" alt="bintang">
+                    </div>
+                  </div>
+                </div>
+                </div>
+              </div>
+            <div class="review">
+              <div class="mt-[22px] mb-[30px] h-[83px]">
+                <h1 class="font-medium text-xl">Mastering UI/UX Untuk Agency Case : Visual Design, Design Thinking, Prototyping</h1>
+              </div>
+              <a class="rounded-[5px] bg-primary/40 dark:bg-primary py-[10px] text-base px-[10px]">UI/UX Development</a>
+              <div class="harga flex flex-wrap justify-between items-center mt-[60px]">
+              <h3 class="font-bold text-[25px] text-primary">Rp 600,000</h3>
+              <a href="#" class="py-[15px] px-[30px] rounded-[50px] text-button hover:bg-button hover:text-white border border-button hover:border-button transition duration-300 ease-in-out font-medium">Lihat Kelas</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="pembungkus dark:text-white">
+              <div class="h-[290px] overflow-hidden group relative dark:border-2 rounded-[10px] bg-cover bg-no-repeat">
+                <div class="w-full h-full bg-[url('../dist/img/pelatihan/unsplash_UYsBCu9RP3Y.png')] bg-cover bg-center absolute group-hover:scale-125 group transition-all duration-500">
+                <div class="linear group-hover:scale-90 transition-all duration-500 flex items-end">
+                  <div class="info ml-[33px] font-medium mb-[34px]">
+                    <h1 class="text-white pb-2">932 Siswa Terdaftar</h1> 
+                    <div class="flex bintang gap-[9px]">
+                      <img src="dist/img/pelatihan/Vector (1).png" alt="bintang">
+                      <img src="dist/img/pelatihan/Vector (1).png" alt="bintang">
+                      <img src="dist/img/pelatihan/Vector (1).png" alt="bintang">
+                      <img src="dist/img/pelatihan/Vector (1).png" alt="bintang">
+                      <img src="dist/img/pelatihan/Vector (1).png" alt="bintang">
+                    </div>
+                  </div>
+                </div>
+                </div>
+              </div>
+            <div class="review">
+              <div class="h-[83px] mt-[22px] mb-[30px]">
+                <h1 class="font-medium text-xl">Slicing Web Design to ReactJS</h1>
+              </div>
+              <a class="rounded-[5px] bg-primary/40 dark:bg-primary py-[10px] text-base px-[10px]">Front-End Development</a>
+              <div class="harga flex flex-wrap justify-between items-center mt-[60px]">
+              <h3 class="font-bold text-[25px] text-primary">Rp 200,000</h3>
+              <a href="#" class="py-[15px] px-[30px] rounded-[50px] text-button hover:bg-button hover:text-white border border-button hover:border-button transition duration-300 ease-in-out font-medium">Lihat Kelas</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Pelatihan End -->
+
+
+    <!-- Iklan Start -->
+    <section id="iklan" class="iklan dark:bg-black px-4">
+      <div class="container pt-[180px]">
+        <div class="flex flex-wrap items-center">
+          
+          <div class="w-full lg:w-1/2 animate-wiggle">
+            <img src="dist/img/pelatihan/Group 7.png" alt="hero" />
+          </div>
+
+          <div class="2xl:pl-[150px] lg:pl-3 pl-0 w-full lg:w-1/2">
+            <div class="header-section mt-5 lg:mt-0">
+              <h1
+                class="text-hitam dark:text-white xl:text-[40px] font-medium leading-[46.92px] xl:leading-[53px] text-[30px]"
+              >
+              Platform Pelatihan Online
+              Terbaik Kini Telah Hadir
+              </h1>
+            </div>
+            <div class="subheader-section xl:pt-[26px] lg:pt-[12px] pt-7">
+              <h2 class="text-hitam dark:text-white text-base">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>Id morbi purus lacus diam at mi in facilisis commodo.
+              </h2>
+            </div>
+            <div class="subheader-section xl:pt-[26px] lg:pt-[8px] pt-5">
+              <h2 class="text-hitam dark:text-white text-base">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>Id morbi purus lacus diam at mi in facilisis commodo.
+              </h2>
+            </div>
+            <div class="button xl:pt-[60px] pt-[20px] flex flex-wrap">
+              <a
+                href="#"
+                class="lg:mr-[101px] mr-5 py-[15px] px-[30px] bg-button rounded-[50px] text-white hover:bg-transparent border border-button hover:text-button hover:border-button transition duration-300 ease-in-out"
+                >Baca Selengkapnya</a
+              >
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- Iklan End -->
+
+    <!-- Review Start -->
+    <section id="review" class="ketegori-populer xl:h-[762px] h-auto bg-primary/10 dark:bg-black">
+      <div class="container pt-[212px]">
+        <div class="w-full px-4">
+          <h1 class="review text-center font-medium text-[25px] dark:text-white leading-[29px]">Apa Kata Mereka Yang Sudah<br>Menyelesaikan Kelas di Be Creative ?</h1>
+        </div>
+        <div class="w-full mt-14 px-[20px] lg:px-0">
+          <div
+            class="grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-6  justify-items-between"
+          >
+            <div
+              class="hover:bg-transparent text-white hover:text-hitam bg-primary border-[3px] rounded-lg border-primary group transition duration-500 px-[30px] py-[40px]"
+            >
+              <div class="div flex gap-x-2">
+                <img src="dist/img/review/Vector (1).png" alt="bintang">
+                <img src="dist/img/review/Vector (1).png" alt="bintang">
+                <img src="dist/img/review/Vector (1).png" alt="bintang">
+                <img src="dist/img/review/Vector (1).png" alt="bintang">
+                <img src="dist/img/review/Vector (1).png" alt="bintang">
+              </div>
+              <h1 class="leading-[23.46px] text-[20px] font-medium pb-[35px] pt-[25px]">Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit.</h1>
+              <div class="flex items-center">
+                <img src="dist/img//review/Ellipse 11.png" alt="profile">
+                <div class="ml-[20px] w-full">
+                  <h1>Kathryn Murphy</h1>
+                  <h3 class="font-light">UI/UX Designer</h3>
+                </div>
+                <img src="dist/img/review/koma.png" alt="koma">
+              </div>
+            </div>
+            
+            <div
+              class="hover:bg-transparent text-white hover:text-hitam bg-primary border-[3px] rounded-lg border-primary group transition duration-500 px-[30px] py-[40px]"
+            >
+              <div class="div flex gap-x-2">
+                <img src="dist/img/review/Vector (1).png" alt="bintang">
+                <img src="dist/img/review/Vector (1).png" alt="bintang">
+                <img src="dist/img/review/Vector (1).png" alt="bintang">
+                <img src="dist/img/review/Vector (1).png" alt="bintang">
+                <img src="dist/img/review/Vector (1).png" alt="bintang">
+              </div>
+              <h1 class="leading-[23.46px] text-[20px] font-medium pb-[35px] pt-[25px]">Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit.</h1>
+              <div class="flex items-center">
+                <img src="dist/img//review/Ellipse 11.png" alt="profile">
+                <div class="ml-[20px] w-full">
+                  <h1>Kathryn Murphy</h1>
+                  <h3 class="font-light">UI/UX Designer</h3>
+                </div>
+                <img src="dist/img/review/koma.png" alt="koma">
+              </div>
+            </div>
+            
+            <div
+              class="hover:bg-transparent text-white hover:text-hitam bg-primary border-[3px] rounded-lg border-primary group transition duration-500 px-[30px] py-[40px]"
+            >
+              <div class="div flex gap-x-2">
+                <img src="dist/img/review/Vector (1).png" alt="bintang">
+                <img src="dist/img/review/Vector (1).png" alt="bintang">
+                <img src="dist/img/review/Vector (1).png" alt="bintang">
+                <img src="dist/img/review/Vector (1).png" alt="bintang">
+                <img src="dist/img/review/Vector (1).png" alt="bintang">
+              </div>
+              <h1 class="leading-[23.46px] text-[20px] font-medium pb-[35px] pt-[25px]">Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit.</h1>
+              <div class="flex items-center">
+                <img src="dist/img//review/Ellipse 11.png" alt="profile">
+                <div class="ml-[20px] w-full">
+                  <h1>Kathryn Murphy</h1>
+                  <h3 class="font-light">UI/UX Designer</h3>
+                </div>
+                <img src="dist/img/review/koma.png" alt="koma">
+              </div>
+            </div>
+            
+            
+        </div>
+      </div>
+    </section>
+    <!-- Review End -->
+  
+    <!-- Iklan 2 start -->
+    <section id="iklan" class="iklan lg:h-full dark:bg-black px-4">
+      <div class="container pt-36 pb-[150px]">
+        <div class="flex flex-wrap items-center">
+
+          <div class="w-full lg:w-1/2 mb-5 lg:mb-0">
+            <div class="header-section">
+              <h1
+                class="text-hitam dark:text-white xl:text-[40px] font-medium leading-[46.92px] xl:leading-[53px] text-[30px]"
+              >
+              Get Ready to Learn<br>and Grow Your Skill
+              </h1>
+            </div>
+            <div class="subheader-section xl:pt-[26px] lg:pt-[12px] pt-7">
+              <h2 class="text-hitam dark:text-white text-base">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>Id morbi purus lacus diam at mi in facilisis commodo.
+              </h2>
+            </div>
+            <div class="subheader-section xl:pt-[26px] lg:pt-[8px] pt-5">
+              <h2 class="text-hitam dark:text-white text-base">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>Id morbi purus lacus diam at mi in facilisis commodo.
+              </h2>
+            </div>
+            <div class="button xl:pt-[60px] pt-[20px] flex flex-wrap">
+              <a
+                href="#"
+                class="lg:mr-[101px] mr-5 py-[15px] px-[30px] bg-button rounded-[50px] text-white hover:bg-transparent border border-button hover:text-button hover:border-button transition duration-300 ease-in-out"
+                >Mulai Belajar Sekarang</a
+              >
+            </div>
+          </div>
+
+          <div class="w-full lg:w-1/2 animate-wiggle">
+            <img src="dist/img/pelatihan/Group 52.png" alt="hero" />
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- Iklan 2 end -->
+    
+    <!-- Footer start -->
+    <div class="footer dark:bg-black">
+      <footer class="bg-primary/80 dark:bg-primary xl:h-[519px] h-full rounded-t-[50px] px-4">
+      <div class="container">
+        <div class="grid xl:grid-cols-footer lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
+          <div class=" text-white font-light pt-[60px]">
+            <img src="dist/img/hero/Logo (1).png" alt="">
+            <ul class="mt-[36px]">
+              <li class="pb-[27px]">
+                <a href="#" class="hover:text-hitam transition-all duration-300">help@becreative.com</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-hitam transition-all duration-300">(0321) 887372</a>
+              </li>
+            </ul>
+            <div class="flex gap-x-[30px] lg:mt-[62px] mt-5">
+              <a href="#">
+                <img src="dist/img/footer/Vector (1).png" alt="whatsapp">
+              </a>
+              <a href="#">
+                <img src="dist/img/footer/Vector (2).png" alt="instagram">
+              </a>
+              <a href="#">
+                <img src="dist/img/footer/Vector (3).png" alt="facebook">
+              </a>
+            </div>
+          </div>
+
+          
+            <div class="gl:pt-[85px] pt-14">
+              <h3 class="text-[25px] text-[#ECE7B4] font-bold pb-[30px]">Payment</h3>
+              <a href="#">
+                <img class="pb-[29px]" src="dist/img/footer/Bank BCA Logo (PNG-480p) - FileVector69 1.png" alt="">
+              </a>
+              <a href="#">
+                <img class="pb-[29px]" src="dist/img/footer/Bank BRI (Bank Rakyat Indonesia) Logo (PNG-720p) - FileVector69 1.png" alt="">
+              </a>
+              <a href="#">
+                <img class="pb-[29px]" src="dist/img/footer/Bank BNI Logo (PNG-720p) - FileVector69 1.png" alt="">
+              </a>
+              <a href="#">
+                <img class="pb-[29px]" src="dist/img/footer/Bank Mandiri Logo (PNG-720p) - FileVector69 1.png" alt="">
+              </a>
+            </div>
+            
+            <div class="gl:pt-[85px] pt-14">
+              <h3 class="font-bold text-[#ECE7B4] text-[25px] pb-[39px]">Information</h3>
+              <ul class="text-white">
+                <li>
+                  <a href="#" class="inline-block text-xl font-light hover:text-hitam pb-5 transition duration-300">Office Hours</a>
+                </li>
+                <li>
+                  <a href="#" class="inline-block text-xl font-light hover:text-hitam pb-5 transition duration-300">Requirements</a>
+                </li>
+                <li>
+                  <a href="#" class="inline-block text-xl font-light hover:text-hitam transition duration-300">About Us</a>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="gl:pt-[85px] pt-14">
+              <h3 class="font-bold text-[#ECE7B4] text-[25px] pb-[39px]">Helpfull Link</h3>
+              <ul class="text-white">
+                <li>
+                  <a href="#" class="inline-block text-xl font-light hover:text-hitam pb-5 transition duration-300">Service</a>
+                </li>
+                <li>
+                  <a href="#" class="inline-block text-xl font-light hover:text-hitam pb-5 transition duration-300">Support</a>
+                </li>
+                <li>
+                  <a href="#" class="inline-block text-xl font-light hover:text-hitam pb-5 transition duration-300">Terms & Condition</a>
+                </li>
+                <li>
+                  <a href="#" class="inline-block text-xl font-light hover:text-hitam pb-5 transition duration-300">Privacy Policy</a>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="gl:pt-[85px] pt-14 pb-5">
+              <h3 class="font-bold text-[#ECE7B4] text-[25px] pb-[39px]">Address</h3>
+              <h5 class="text-white font-light text-xl hover:text-hitam transition-all duration-500 cursor-pointer pb-[20px]">Jl Gatot Subroto<br>No. 123 Blok. A23<br>Malang, Jawa Timur</h5>
+              <a class="text-[#446CFB] text-xl font-light" href="#">Google Maps</a>
+            </div>          
+        </div>
+      </div>
+      </footer>
+    </div>
+    <!-- Footer end -->
+
+    <!-- back to top star -->
+    <a href="#home" id="to-top" class="h-14 w-14 bg-button hidden rounded-full fixed z-[999999] bottom-4 right-4 p-4 justify-center items-center hover:animate-pulse animate-bounce">
+      <span class="mt-2 block w-5 h-5 border-t-2 border-l-2 rotate-45"></span>
+    </a>
+    <!-- back to top end -->
+
+    <script src="dist/script/script.js"></script>
+  </body>
+</html>
